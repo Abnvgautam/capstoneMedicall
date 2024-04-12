@@ -1,0 +1,32 @@
+.form{
+    margin-bottom: 20px;
+    border-radius: 0px;
+    width: 100%;
+}
+.btn-form{
+    border-radius: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.icon-phone{
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 36px;
+    left: 50px;
+}
+.icon-phoneNumber{
+    font-size: 13px;
+    position: relative;
+    bottom: 54px;
+    left: 50px;
+    color: #DD5471;
+}
+.phone-icon{
+    margin-top: 40px;
+}

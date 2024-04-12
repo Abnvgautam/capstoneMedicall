@@ -1,0 +1,34 @@
+.container-style-two {
+    padding-bottom: 73px;
+}
+
+.text-containerNext {
+    color: #0360D9;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 100px;
+}
+
+.text-para {
+    margin-left: 158px;
+    margin-right: 158px;
+    color: #000000;
+
+}
+
+.container-card {
+    margin-top: 66px;
+}
+
+.container-card-two {
+    margin-top: 18px;
+}
+.iconImage{
+    position: absolute;
+    top: 1.5rem;
+    height: 120px;
+}
+
+.medicine-text{
+    text-align: center;
+}

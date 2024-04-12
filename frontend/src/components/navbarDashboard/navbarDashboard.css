@@ -1,0 +1,12 @@
+.avatar-image-dashboard{
+    margin-left: 14.5rem;
+
+}
+.avatar-name-dashboard{
+    position: absolute;
+    top: 32px;
+    right: 7.5rem;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0360D9;
+}

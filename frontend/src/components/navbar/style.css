@@ -1,0 +1,381 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white !important;
+}
+
+.nav-link-navbar {
+    position: relative;
+    padding-bottom: 10px;
+    /* Adjust this value as needed */
+    color: black;
+    /* Change color if needed */
+    text-decoration: none;
+    display: inline-block;
+    /* Ensures the NavLink takes up only the necessary space */
+}
+
+/* .nav-link-navbar.active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Place the bar at the center of the NavLink */
+/* width: 50%;
+    /* Set the width to 50% of the NavLink */
+/*transform: translateX(-50%);
+    /* Move the bar back by half its width to center it */
+/*height: 3px;
+    /* Thickness of the blue bar */
+/* background-color: blue;
+    /* Change color if needed */
+/*  transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+} */
+
+
+.button-style {
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+
+.container-style {
+    background-color: #F6FAFD;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.container-style-two {
+    padding-bottom: 73px;
+}
+
+.container-style-blue {
+    background-color: #0360D9;
+    min-height: 60px;
+}
+
+.container-choose-section {
+    background-color: #0360D9;
+    height: 520px;
+}
+
+.medicallLogo {
+    margin-left: 120px;
+}
+
+.navbar-length {
+    height: 85px;
+}
+
+.navbar-color {
+    border-bottom: 2px solid #0360D9 !important;
+}
+
+.navbar-content {
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 110px;
+    margin-right: 210px;
+
+}
+
+.image-home {
+    margin-top: 50px;
+    margin-right: 5%;
+}
+
+.homeText {
+    margin-left: 176px;
+    margin-top: 80px;
+    font-size: 50px;
+    color: #000000;
+    text-align: left;
+}
+
+.custom-fluid {
+    width: 80% !important;
+    background: #FFFFFF;
+}
+
+.homeButton {
+    margin-left: 50px !important;
+    transform: translateX(50%);
+    margin-top: 100px !important;
+}
+
+.text-containerNext {
+    color: #0360D9;
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 60px;
+}
+
+.text-para {
+    margin-left: 158px;
+    margin-right: 158px;
+    color: #FFFFFF;
+
+}
+
+.homepageCard {
+    border-radius: 0px;
+    width: 65%;
+    height: 120px;
+    margin-left: 16rem;
+    margin-top: -30px;
+}
+
+.cardText {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.select-form {
+    border-radius: 0px;
+    margin-left: 26px;
+    margin-bottom: 30px;
+}
+
+.btn-card {
+    border-radius: 0px;
+    margin-left: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container-card {
+    margin-top: 66px;
+}
+
+.container-card-two {
+    margin-top: 18px;
+}
+
+.card-title {
+    margin-top: 154px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.card-text {
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.card-box {
+    border-radius: 20px;
+
+}
+
+.text-choose-section {
+    font-size: 48px;
+    font-weight: 600;
+    margin-right: 80px;
+    padding-top: 92px;
+}
+
+.text-section-two {
+    color: #FFFFFF;
+    margin-left: 168px;
+}
+
+.text-choose-para {
+    margin-right: 120px;
+    text-align: justify;
+}
+
+.image-choose {
+    margin-top: 10px;
+}
+
+.text-support {
+    color: black;
+    font-size: 48px;
+    margin-left: 107px;
+    font-weight: 600;
+    margin-top: 47px;
+}
+
+.text-support-para {
+    margin-left: 107px;
+    font-weight: bold;
+}
+
+.image-chat {
+    margin-top: 140px;
+    margin-left: 102px;
+}
+
+.btn-chat {
+    border-radius: 0px;
+    margin-left: 107px;
+    margin-top: 36px;
+    padding: 10px 40px 10px 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.hr-line {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.text-touch {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.text-touch-para {
+    margin-right: 60px;
+}
+
+.text-touch-members {
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 48px;
+    margin-left: 24px;
+}
+
+.form {
+    margin-bottom: 20px;
+    border-radius: 0px;
+    width: 100%;
+}
+
+.card-feedback {
+    border-radius: 20px;
+    margin-top: 54px;
+    margin-left: 24px;
+    width: 100%;
+    height: 40%;
+}
+
+.avatar-image {
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.avatar-name {
+    position: absolute;
+    top: 40px;
+    left: 96px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.avatar-date {
+    position: absolute;
+    top: 64px;
+    left: 98px;
+    font-size: 12px;
+}
+
+.avatar-para {
+    margin-top: 36px;
+    margin-left: 24px;
+}
+
+.star-icon {
+    margin-top: 28px;
+    margin-left: 60px;
+}
+
+.btn-form {
+    border-radius: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.icon-phone {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 36px;
+    left: 50px;
+}
+
+.icon-phoneNumber {
+    font-size: 13px;
+    position: relative;
+    bottom: 54px;
+    left: 50px;
+    color: #DD5471;
+}
+
+.phone-icon {
+    margin-top: 40px;
+}
+
+.footer-text {
+    margin-top: 66px;
+    margin-left: 120px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.footer-para {
+    margin-left: 120px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+.footer-text-address {
+    margin-left: 20px;
+    margin-top: 66px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.footer-map {
+    margin-left: 20px;
+    margin-top: -6px;
+}
+
+.footer-icons {
+    margin-left: 115px;
+    margin-top: 24px;
+}
+
+.social-icon {
+    color: white;
+    margin-right: 8px;
+}
+
+.hr-line-footer {
+    margin-left: 105px;
+    margin-right: 65px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.container-footer {
+    background-color: #0360D9;
+    height: 480px;
+}
+
+a.nav-link-navbar.nav-link.active {
+    background-color: #0360D9;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+
+.navbar-expand .navbar-collapse {
+    justify-content: space-around;
+}

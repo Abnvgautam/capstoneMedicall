@@ -1,0 +1,52 @@
+.signup-container{
+    background-color: #0360D9;
+    height: 100vh;
+    overflow: auto;
+}
+.signup-card{
+    width: 60%;
+    height: 600px;
+    border-radius: 0px;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 30px;
+}
+.signup-logo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.signup-text{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 13rem;
+    margin-top: 2rem;
+}
+.form-email-signup, .form-password{
+    margin-left: -48px;
+}
+.btn-signup{
+    width: 38%;
+    margin-left: 17.3rem;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+.forgot-password{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 13rem;
+}
+.btn-signup-dark{
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-top: 36px;
+}
+.login-here{
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

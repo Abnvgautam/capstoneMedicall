@@ -1,0 +1,105 @@
+.about-container{
+    background-color: #A6DCD7;
+    height: 165vh;
+}
+.about-heading{
+    font-size: 40px;
+    color: #0360D9;
+    font-weight: 600;
+    margin-left: 130px;
+    padding-top: 60px;
+}
+.about-heading-two{
+    font-size: 40px;
+    color: #0360D9;
+    font-weight: 600;
+    margin-left: 130px;
+    padding-top: 30px;
+}
+.about-para{
+    margin-left: 130px;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    margin-right: 130px;
+}
+.doctors-specialities{
+    background-color: #A6DCD7;
+    height: 890px;
+}
+
+.doctor-team{
+    width: 84.5%;
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+
+.doctor-team-text{
+    font-size: 40px;
+    text-align: left;
+    margin-right: 15%;
+    color: white;
+    position: relative;
+    bottom: 110%;
+    left: 26%;
+}
+.doctor-teamText-two{
+    font-size: 24px;
+    margin-right: 240px;
+    color: white;
+    position: relative;
+    bottom: 90%;
+    left: 16%;
+}
+.iconOne-text{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 54px;
+    margin-top: -40px;
+}
+.iconOne-textTwo{
+    font-size: 17px;
+    margin-left: 54px;
+    margin-top: -16px;
+    margin-right: -8px;
+}
+.icons-row{
+    margin-top: 20px;
+}
+.offer-heading{
+    font-size: 22px;
+    color: #0360D9;
+    font-weight: 600;
+    margin-top: 16rem;
+    margin-left: 9rem;
+}
+.list-one{
+    margin-left: 9rem;
+    font-size: 18px;
+    padding-right: 80px;
+}
+.offer-heading-two{
+    font-size: 22px;
+    color: #0360D9;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-left: 9rem;
+}
+.about-image{
+    margin-left: 150px;
+}
+.about-contact{
+    margin-top: 40px;
+    margin-left: 32px;
+}
+.doctorTwo-image{
+    margin-left: 100px;
+    margin-top: 78px;
+}
+.hr-line-about{
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: -10px;
+    margin-bottom: 48px;
+}

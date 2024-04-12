@@ -1,0 +1,77 @@
+
+.container-patientTab{
+    background-color: #0360D9;
+    overflow: auto;
+}
+.card-patient{
+    width: 1120px;
+    margin-left: 130px;
+    margin-right: auto;
+    height: 108px;
+    margin-top: 40px;
+    border-radius: 0px;
+}
+.card-dashboard{
+    width: 233px;
+    margin-left: 130px;
+    margin-right: auto;
+    height: 595px;
+    margin-top: 20px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+.card-dashboard-expand{
+    width: 877px;
+    height: 595px;
+    margin-left: 54px;
+    margin-top: 20px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+.dashboard-date{
+    margin-left: 40px;
+}
+.dashboard-text{
+    margin-left: 40px;
+    font-size: 32px;
+    color: #0360D9;
+    font-weight: 600;
+    margin-top: -10px;
+}
+.dashboard-content{
+    font-weight: 600;
+    margin-left: 36px;
+    margin-right: auto;
+    margin-top: 27px;
+}
+.dashboard-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.dashboard-link > svg {
+    margin-right: 10px;
+}
+
+.dashboard-link.active::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.patient-welcome{
+    font-size: 24px;
+    color: #0360D9;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 8px;
+    margin-left: 12px;
+}
