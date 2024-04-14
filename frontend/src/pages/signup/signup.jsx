@@ -1,4 +1,5 @@
 import { Container, Card, Button} from "react-bootstrap";
+import { MenuItem } from "@mui/material";
 import {useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {NavLink, useNavigate} from 'react-router-dom'
@@ -91,8 +92,20 @@ const Signup =() =>{
                     >
                         <TextField id="name" name='name' value={name} className="emailForm" label="Full Name" variant="standard" onChange={onChange} />
                         <TextField id="email" name='email' value={email} className="emailForm" label="Email" variant="standard" onChange={onChange} />
-                        <TextField id="role" name='role' value={role} className="emailForm" label="Role" variant="standard" onChange={onChange} />
-                        <TextField id="password" name='password' type="password" value={password} className="PasswordForm" label="Password" variant="standard" onChange={onChange} />
+                        <TextField
+                            id="role"
+                            name='role'
+                            select
+                            label="Role"
+                            value={role}
+                            className="emailForm"
+                            variant="standard"
+                            onChange={onChange}
+                        >
+                            <MenuItem value="doctor">Doctor</MenuItem>
+                            <MenuItem value="nurse">Patient</MenuItem>
+                            {/* <MenuItem value="admin">Admin</MenuItem> */}
+                        </TextField><TextField id="password" name='password' type="password" value={password} className="PasswordForm" label="Password" variant="standard" onChange={onChange} />
                         <Button type="submit" variant="primary" className="btn-signup">Signup</Button>
                     </Box>
                     

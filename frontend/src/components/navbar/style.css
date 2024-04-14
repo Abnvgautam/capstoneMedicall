@@ -51,6 +51,7 @@ body {
 
 .container-style-two {
     padding-bottom: 73px;
+    padding-top: 30px;
 }
 
 .container-style-blue {
@@ -78,8 +79,7 @@ body {
 .navbar-content {
     font-weight: 600;
     font-size: 14px;
-    margin-left: 110px;
-    margin-right: 210px;
+    /* margin-right: 210px; */
 
 }
 
@@ -102,9 +102,8 @@ body {
 }
 
 .homeButton {
-    margin-left: 50px !important;
+    margin-left: 38px !important;
     transform: translateX(50%);
-    margin-top: 100px !important;
 }
 
 .text-containerNext {
@@ -214,10 +213,11 @@ body {
 .btn-chat {
     border-radius: 0px;
     margin-left: 107px;
-    margin-top: 36px;
+    margin-top: 0px;
     padding: 10px 40px 10px 40px;
     text-transform: uppercase;
     font-size: 16px;
+    margin-bottom: 30px;
 }
 
 .hr-line {
