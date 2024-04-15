@@ -11,12 +11,23 @@ import {NavLink, useNavigate} from 'react-router-dom'
 import NavbarDashboard from '../navbarDashboard/navbarDashboard';
 import {useSelector, useDispatch} from 'react-redux'
 import { logout, reset } from '../../features/auth/authSlice';
+import { useState, useEffect } from 'react';
 
 const Messages =() =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const {user} = useSelector((state)=> state.auth)
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Update every second
+
+    // Clean up the interval to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
     const onLogout =()=>{
         dispatch(logout())
@@ -39,7 +50,7 @@ return(
             <Card.Body>
                         <Row>
                             <Col>
-                                <p className='dashboard-date'>10:12PM September 4, 2024</p>
+                                <p className='dashboard-date'>{currentTime.toLocaleString()}</p>
                                 <p className='dashboard-text'>Good Evening, {displayName}</p>
                             </Col>
                             <Col>

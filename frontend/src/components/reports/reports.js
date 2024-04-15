@@ -6,13 +6,24 @@ import EmailIcon from '@mui/icons-material/Email';
 import ArticleIcon from '@mui/icons-material/Article';
 import HistoryIcon from '@mui/icons-material/History';
 import ChatIcon from '@mui/icons-material/Chat';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
 import NavbarDashboard from '../navbarDashboard/navbarDashboard';
+import { useState, useEffect } from 'react';
+import {useSelector} from 'react-redux'
+
 
 const Reports =() =>{
+    const {user} = useSelector((state) => state.auth)
+    const [currentTime, setCurrentTime] = useState(new Date());
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentTime(new Date());
+        }, 1000); // Update every second
+    
+        // Clean up the interval to prevent memory leaks
+        return () => clearInterval(interval);
+      }, []); // Empty dependency array ensures the effect runs only once on mount
 
 return(
     <>
@@ -22,8 +33,8 @@ return(
             <Card.Body>
                         <Row>
                             <Col>
-                                <p className='dashboard-date'>10:12PM September 4, 2024</p>
-                                <p className='dashboard-text'>Good Evening, Finn Allen !</p>
+                                <p className='dashboard-date'>{currentTime.toLocaleString()}</p>
+                                <p className='dashboard-text'>Good Evening, {user.name}</p>
                             </Col>
                             <Col>
                             
@@ -48,12 +59,6 @@ return(
                         </NavLink>
                         <NavLink to="/patients/chat" activeClassName="active" className="dashboard-content dashboard-link">
                             <ChatIcon /> Chat
-                        </NavLink>
-                        <NavLink to="/patients/profile" activeClassName="active" className="dashboard-content dashboard-link">
-                            <AccountBoxIcon /> Profile
-                        </NavLink>
-                        <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
-                            <SettingsIcon /> Settings
                         </NavLink>
                         <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link">
                             <LogoutIcon /> Logout

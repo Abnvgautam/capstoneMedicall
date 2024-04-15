@@ -23,6 +23,16 @@ const Appointments = () => {
     const dispatch = useDispatch()
     const { user } = useSelector((state) => state.auth)
     const [filteredBookings, setAppointments] = useState([]);
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Update every second
+
+    // Clean up the interval to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
     useEffect(() => {
         const fetchData = async () => {
@@ -73,7 +83,7 @@ const Appointments = () => {
                     <Card.Body>
                         <Row>
                             <Col>
-                                <p className='dashboard-date'>10:12PM September 4, 2024</p>
+                                <p className='dashboard-date'>{currentTime.toLocaleString()}</p>
                                 <p className='dashboard-text'>Good Evening, {displayName}</p>
                             </Col>
                             <Col>
@@ -118,12 +128,6 @@ const Appointments = () => {
                                 <NavLink to="/patients/chat" activeClassName="active" className="dashboard-content dashboard-link">
                                     <ChatIcon /> Chat
                                 </NavLink>
-                                <NavLink to="/patients/profile" activeClassName="active" className="dashboard-content dashboard-link">
-                                    <AccountBoxIcon /> Profile
-                                </NavLink>
-                                <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
-                                    <SettingsIcon /> Settings
-                                </NavLink>
                                 <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link" onClick={onLogout}>
                                     <LogoutIcon /> Logout
                                 </NavLink>
@@ -135,29 +139,62 @@ const Appointments = () => {
                         {user.role === 'patient' ? (
                             <Card className='card-dashboard-expand'>
                                 <Card.Body className='appointment-text'>Appointments
-                                    {filteredBookings.map((booking) => (
-                                        <Card className='card-appointment-call'>
-                                            <SmartDisplayIcon sx={{ fontSize: 48 }} className='video-icon' />
-                                            <p className='video-dateTime'>{booking.appointment_time} | {GetDate(booking.appointment_date)} </p>
-                                            <p className='doctorName-text'>Consultation with {booking.doctorName}</p>
-                                            <Button variant="primary" className="btn-joinCall"><a className='zoom-link' href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</a></Button>
+                                <Row xs={1} md={2} lg={3} className="g-4"> {/* Define the number of columns for different screen sizes */}
+                                        {filteredBookings.map((booking, index) => (
+                                            <Col key={index}> {/* Add a unique key to each child component */}
+                                                <Card style={{ width: '16rem' }} className='appointment-Card'>
+                                                    <Card.Body className='appointment-cardBody'>
+                                                        <Card.Title>{booking.doctorName}</Card.Title>
+                                                        <Card.Subtitle className="mb-2 text-muted appointment-Time">{booking.appointment_time} | {GetDate(booking.appointment_date)}</Card.Subtitle>
+                                                        <Card.Text className='text-muted appointment-Text'>
+                                                            You have an appointment. Press the button to join the call with the doctor.
+                                                        </Card.Text>
+                                                        <Button variant="primary" className='appointment-btn zoom-link'  href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</Button>
+                                                    </Card.Body>
+                                                </Card>
+                                            </Col>
+                                        ))}
+                                                </Row>
+                                    {/* {filteredBookings.map((booking) => (
 
-                                        </Card>
-                                    ))}
+                                        // <Card className='card-appointment-call'>
+                                        //     <SmartDisplayIcon sx={{ fontSize: 48 }} className='video-icon' />
+                                        //     <p className='video-dateTime'>{booking.appointment_time} | {GetDate(booking.appointment_date)} </p>
+                                        //     <p className='doctorName-text'>Consultation with {booking.doctorName}</p>
+                                        //     <Button variant="primary" className="btn-joinCall"><a className='zoom-link' href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</a></Button>
+
+                                        // </Card>
+                                    ))} */}
                                 </Card.Body>
 
                             </Card>
                         ) : (
                             <Card className='card-dashboard-expand'>
                                 <Card.Body className='appointment-text'>Appointments
-                                    {filteredBookings.map((booking) => (
+                                <Row xs={1} md={2} lg={3} className="g-4"> {/* Define the number of columns for different screen sizes */}
+                                        {filteredBookings.map((booking, index) => (
+                                            <Col key={index}> {/* Add a unique key to each child component */}
+                                                <Card style={{ width: '16rem' }} className='appointment-Card'>
+                                                    <Card.Body className='appointment-cardBody'>
+                                                        <Card.Title>{booking.patientName}</Card.Title>
+                                                        <Card.Subtitle className="mb-2 text-muted appointment-Time">{booking.appointment_time} | {GetDate(booking.appointment_date)}</Card.Subtitle>
+                                                        <Card.Text className='text-muted appointment-Text'>
+                                                        You have a consultation with Patient {booking.patientName}
+                                                        </Card.Text>
+                                                        <Button variant="primary" className='appointment-btn zoom-link'  href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</Button>
+                                                    </Card.Body>
+                                                </Card>
+                                            </Col>
+                                        ))}
+                                                </Row>
+                                    {/* {filteredBookings.map((booking) => (
                                         <Card className='card-appointment-call'>
                                             <SmartDisplayIcon sx={{ fontSize: 48 }} className='video-icon' />
                                             <p className='video-dateTime'>{booking.appointment_time} | {GetDate(booking.appointment_date)} </p>
                                             <p className='doctorName-text'>Consultation with Patient {booking.patientName}</p>
                                             <Button variant="primary" className="btn-joinCall"><a className='zoom-link' href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</a></Button>
                                         </Card>
-                                    ))}
+                                    ))} */}
                                 </Card.Body>
                             </Card>
                         )}

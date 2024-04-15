@@ -17,7 +17,6 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ConfirmationOverlay from "../../components/confirmation/confirmationOverlay"
 import axios from 'axios';
-import ZoomMtg from '@zoom/meetingsdk';
 import qs from 'querystring'
 
 const Specialities = () => {
@@ -38,7 +37,7 @@ const Specialities = () => {
     const [selectedDate, setSelectedDate] = useState(GetDate(new Date().toISOString()));
     const [selectedDoctor, setselectedDoctor] = useState(null);
     const [selectedDoctorName, setselectedDoctorName] = useState(null);
-    const [selectedTime, setSelectedTime] = useState(null);
+    const [selectedTimes, setSelectedTimes] = useState({});
 
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
@@ -132,7 +131,7 @@ const Specialities = () => {
             doctor: fdoctorId,
             patient: user._id, // Optional: reset if necessary
             appointment_date: GetDate(selectedDate),
-            appointment_time: selectedTime,
+            appointment_time: selectedTimes[fdoctorId],
             status: 'Confirmed',
             notes: 'This is dynamic date based on selected doctor',
         };
@@ -193,7 +192,7 @@ const Specialities = () => {
                     closeOverlay={() => setShowConfirmation(false)}
                     selectedDoctorName={selectedDoctorName}
                     selectedDate={selectedDate}
-                    selectedTime={selectedTime}
+                    selectedTime={selectedTimes[selectedDoctor]}
                     navigate={navigate}
                 />
             )}
@@ -264,21 +263,31 @@ const Specialities = () => {
                                                 <div className="date-chips">
                                                     {timeRows.map((row, index) => (
                                                         <Stack key={index} direction="row" spacing={1} className="date-chips-stack">
-                                                            <Chip label={row[0]} color="primary" variant={selectedDoctor === fdoctor._id
-                                                                && filteredBookings?.some((booking) => booking.appointment_time === row[0]) ? "primary" : "outlined"}
+                                                            <Chip
+                                                                label={row[0]}
+                                                                color="primary"
+                                                                variant={selectedDoctor === fdoctor._id && filteredBookings?.some((booking) => booking.appointment_time === row[0]) ? "primary" : "outlined"}
                                                                 onClick={() => {
-                                                                    setSelectedTime(row[0]);
+                                                                    setSelectedTimes(prevSelectedTimes => ({
+                                                                        ...prevSelectedTimes,
+                                                                        [fdoctor._id]: row[0]
+                                                                    }));
                                                                 }}
-                                                                style={{ backgroundColor: selectedTime === row[0] ? "#b5ddee" : '' }}
-                                                                disabled={selectedDoctor === fdoctor._id
-                                                                    && filteredBookings?.some((booking) => booking.appointment_time === row[0])}
+                                                                style={{ backgroundColor: selectedTimes[fdoctor._id] === row[0] ? "#b5ddee" : '' }}
+                                                                disabled={selectedDoctor === fdoctor._id && filteredBookings?.some((booking) => booking.appointment_time === row[0])}
                                                             />
-                                                            <Chip label={row[1]} color="primary" variant={selectedDoctor === fdoctor._id && filteredBookings?.some((booking) => booking.appointment_time === row[1]) ? "primary" : "outlined"} onClick={() => {
-                                                                setSelectedTime(row[1]);
-                                                            }}
-                                                                style={{ backgroundColor: selectedTime === row[1] ? "#b5ddee" : '' }}
-                                                                disabled={selectedDoctor === fdoctor._id
-                                                                    && filteredBookings?.some((booking) => booking.appointment_time === row[1])}
+                                                            <Chip
+                                                                label={row[1]}
+                                                                color="primary"
+                                                                variant={selectedDoctor === fdoctor._id && filteredBookings?.some((booking) => booking.appointment_time === row[1]) ? "primary" : "outlined"}
+                                                                onClick={() => {
+                                                                    setSelectedTimes(prevSelectedTimes => ({
+                                                                        ...prevSelectedTimes,
+                                                                        [fdoctor._id]: row[1]
+                                                                    }));
+                                                                }}
+                                                                style={{ backgroundColor: selectedTimes[fdoctor._id] === row[1] ? "#b5ddee" : '' }}
+                                                                disabled={selectedDoctor === fdoctor._id && filteredBookings?.some((booking) => booking.appointment_time === row[1])}
                                                             />
                                                         </Stack>
                                                     ))}

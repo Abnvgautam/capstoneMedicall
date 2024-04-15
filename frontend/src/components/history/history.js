@@ -10,8 +10,23 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink} from 'react-router-dom'
 import '../../pages/patientDashboard/patientDashboard.css'
 import NavbarDashboard from '../navbarDashboard/navbarDashboard';
+import {useSelector} from 'react-redux'
+import { useState, useEffect } from 'react';
+
 
 const History =() =>{
+    const {user} = useSelector((state) => state.auth)
+
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Update every second
+
+    // Clean up the interval to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
 return(
     <>
@@ -21,8 +36,8 @@ return(
             <Card.Body>
                         <Row>
                             <Col>
-                                <p className='dashboard-date'>10:12PM September 4, 2024</p>
-                                <p className='dashboard-text'>Good Evening, Finn Allen !</p>
+                                <p className='dashboard-date'>{currentTime.toLocaleString()}</p>
+                                <p className='dashboard-text'>Good Evening, {user.name}</p>
                             </Col>
                             <Col>
                             

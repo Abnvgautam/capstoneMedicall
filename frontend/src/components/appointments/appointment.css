@@ -13,7 +13,7 @@ body {
 }
 
 .card-dashboard {
-    width: 233px;
+    width: 200px;
     margin-left: 130px;
     margin-right: auto;
     height: 595px;
@@ -23,20 +23,20 @@ body {
 }
 
 .card-dashboard-expand {
-    width: 877px;
+    width: 898px;
     height: 595px;
-    margin-left: 36px;
+    margin-left: 20px;
     margin-top: 20px;
     border-radius: 0px;
     margin-bottom: 20px;
 }
 
 .dashboard-date {
-    margin-left: 40px;
+    margin-left: 8px;
 }
 
 .dashboard-text {
-    margin-left: 40px;
+    margin-left: 8px;
     font-size: 32px;
     color: #0360D9;
     font-weight: 600;
@@ -45,7 +45,7 @@ body {
 
 .dashboard-content {
     font-weight: 600;
-    margin-left: 36px;
+    margin-left: 20px;
     margin-right: auto;
     margin-top: 27px;
 }
@@ -118,4 +118,30 @@ body {
 
 .zoom-link{
     color: antiquewhite;
+}
+
+.appointment-cardBody{
+    margin-top: -6rem;
+    text-align: center;
+    
+}
+
+.appointment-btn{
+    margin-top: -2rem;
+  
+}
+
+.appointment-Card{
+    margin-top: 2rem;
+    background-color: #F5F5F5;
+    border-color: #F5F5F5;
+}
+
+.appointment-Text{
+    font-weight: 300;
+}
+
+.appointment-Time{
+    font-weight: 600;
+    margin-top: 4px;
 }

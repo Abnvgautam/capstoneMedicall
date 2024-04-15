@@ -12,12 +12,25 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import {NavLink, useNavigate} from 'react-router-dom'
 import { logout, reset } from '../../features/auth/authSlice';
 import {useSelector, useDispatch} from 'react-redux'
+import { useState, useEffect } from 'react';
+
 
 
 const PatientDashboard = () =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {user} = useSelector((state) => state.auth)
+
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Update every second
+
+    // Clean up the interval to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
     const onLogout =()=>{
         dispatch(logout())
@@ -33,7 +46,7 @@ const PatientDashboard = () =>{
             <Card.Body>
                         <Row>
                             <Col>
-                                <p className='dashboard-date'>10:12PM September 4, 2024</p>
+                                <p className='dashboard-date'>{currentTime.toLocaleString()}</p>
                                 <p className='dashboard-text'>Good Evening, {user.name}</p>
                             </Col>
                             <Col>
@@ -59,12 +72,6 @@ const PatientDashboard = () =>{
                 </NavLink>
                 <NavLink to="/patients/chat" activeClassName="active" className="dashboard-content dashboard-link">
                     <ChatIcon /> Chat
-                </NavLink>
-                <NavLink to="/patients/profile" activeClassName="active" className="dashboard-content dashboard-link">
-                    <AccountBoxIcon /> Profile
-                </NavLink>
-                <NavLink to="/patients/settings" activeClassName="active" className="dashboard-content dashboard-link">
-                    <SettingsIcon /> Settings
                 </NavLink>
                 <NavLink to="/" activeClassName="active" className="dashboard-content dashboard-link" onClick={onLogout}>
                     <LogoutIcon /> Logout
