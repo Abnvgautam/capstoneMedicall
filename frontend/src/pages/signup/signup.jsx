@@ -103,7 +103,7 @@ const Signup =() =>{
                             onChange={onChange}
                         >
                             <MenuItem value="doctor">Doctor</MenuItem>
-                            <MenuItem value="nurse">Patient</MenuItem>
+                            <MenuItem value="patient">Patient</MenuItem>
                             {/* <MenuItem value="admin">Admin</MenuItem> */}
                         </TextField><TextField id="password" name='password' type="password" value={password} className="PasswordForm" label="Password" variant="standard" onChange={onChange} />
                         <Button type="submit" variant="primary" className="btn-signup">Signup</Button>

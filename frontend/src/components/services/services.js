@@ -28,7 +28,8 @@ const Services =()=>{
                                     <Card.Title className='medicine-text'>General Medicine</Card.Title>
                                     
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Need a routine screening? Get optimal medical attention with primary care services.
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -41,8 +42,9 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Dermatology</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
-                                    </Card.Text>
+                                    Specialized practitioners diagnosing and treating your skin, hair, and nails.
+
+                                        </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -54,7 +56,7 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Psychiatry</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Get guidance on mental wellness with psychiatrists offering.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -67,7 +69,8 @@ const Services =()=>{
                                 <Card.Img variant="top" src={iconFour} alt="Image" className='iconImage'/>
                                     <Card.Title className='medicine-text'>Internal Medicine</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Explore for Adult’s health, diabetes, hypertension, and heart disease treatments.
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -84,7 +87,8 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Pediatrics</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Monitor the growth and development of your infants, children, and adolescents.
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -97,7 +101,8 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Gyanecology</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Worried about women’s health? Get pregnancy and infertility treatments here with one click.
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -110,7 +115,8 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Orthopedics</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Got a fracture or a ligament tear? Meet specialized surgeons employing many treatments.
+
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -123,7 +129,7 @@ const Services =()=>{
                                 <Card.Body>
                                     <Card.Title className='medicine-text'>Endocrinology</Card.Title>
                                     <Card.Text className='medicine-text'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem velit viverra amet faucibus.
+                                    Get a diagnosis and treatment for hormonal imbalance and treatments.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

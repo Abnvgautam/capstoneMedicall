@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -23,13 +23,21 @@ import {useSelector} from 'react-redux'
 function App() {
   const {user} = useSelector((state) => state.auth)
 
+  const SpecialitiesRoute = () => {
+    if (!user) {
+      return <Navigate to="/login" />;
+    } else {
+      return <Specialities />;
+    }
+  };
+
   return(
     <>
       <BrowserRouter>
       <Routes>
           <Route path="/"  exact Component={Home} />
           <Route path="/ourdoctors" Component={OurDoctors} />
-          <Route path="/specialities" Component={Specialities} />
+          <Route path="/specialities" Component={SpecialitiesRoute} />
           <Route path="/aboutus" Component={About} />
           <Route path="/patients" Component={Patients} />
           <Route path="/doctors" Component={Doctors} />

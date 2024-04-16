@@ -181,7 +181,7 @@ const Appointments = () => {
                                                         <Card.Text className='text-muted appointment-Text'>
                                                         You have a consultation with Patient {booking.patientName}
                                                         </Card.Text>
-                                                        <Button variant="primary" className='appointment-btn zoom-link'  href='https://conestogac.zoom.us/j/96629257668?pwd=MmhnUlR3aVhDUHM1NE1VUVhyUWg5QT09'>Join Call</Button>
+                                                        <Button variant="primary" className='appointment-btn zoom-link'  href='https://conestogac.zoom.us/j/92082931875?pwd=YkM5WUNiUExNdGJIOEFWRG1icFMxdz09'>Join Call</Button>
                                                     </Card.Body>
                                                 </Card>
                                             </Col>

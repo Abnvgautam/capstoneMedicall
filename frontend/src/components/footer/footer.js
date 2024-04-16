@@ -14,8 +14,8 @@ const Footer = () => {
                 <Row xs={1} md={3} lg={3}>
                     <Col>
                         <p className='footer-text'>MEDICALL</p>
-                        <p className='footer-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec risus feugiat lectus risus sed ullamcorper. Auctor semper fermentum</p>
-                        <p className='footer-para'>volutpat integer vel. In rhoncus elementum nunc, malesuada mi sed. Nibh est sit lobortis id semper.</p>
+                        <p className='footer-para'>MEDICALL is an online platform where a patient can book an online appointment with the doctors and have a consultation virtually.</p>
+                        <p className='footer-para'>Helps to get online advice from Healthcare Professionals</p>
                     </Col>
                     <Col>
                         <p className='footer-text'>Useful Links</p>
